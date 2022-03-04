@@ -22,7 +22,7 @@ jobs:
       - name: FTP Deploy 🚀
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: 45.84.205.63
-          username: u396691420.dompodsnieznikiem.pl
-          password: o0oxIwdQyg7L
+          server: ${{ secrets.FTP_SERVER_PROD }}
+          username: ${{ secrets.FTP_USER_PROD }}
+          password: ${{ secrets.FTP_PASSWORD_PROD }}
           local-dir: ./build/
