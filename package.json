@@ -1,6 +1,8 @@
 {
   "name": "podsnieznikiem",
-  "version": "0.1.0",
+  "homepage": "https://dompodsnieznikiem.pl/",
+  "version": "1.0.0",
+  "description": "Pod Snieznikiem website",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
