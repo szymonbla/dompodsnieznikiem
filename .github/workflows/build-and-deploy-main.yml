@@ -1,34 +1,28 @@
-# name: Build and Deploy
+name: Build and Deploy
 
-# on: 
-#   push: 
-#     branches: 
-#     - main
+on:
+  push:
+    branches:
+      - main
 
-# env:
-#   REACT_APP_API_URI: ${{ secrets.API_URL }}
-#   REACT_APP_STATIC_DATA_API_URI: ${{ secrets.SURVEY_URL }}
-#   REACT_APP_P24_TOKEN_URI: ${{ secrets.P24_URL }}
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
 
+      - name: Install and Build 🔧
+        run: |
+          yarn install
+          yarn build
 
-# jobs:
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout 🛎️
-#         uses: actions/checkout@v2.3.1
-#         with:
-#           persist-credentials: false
-
-#       - name: Install and Build 🔧
-#         run: |
-#           yarn install
-#           yarn build
-          
-#       - name: FTP Deploy 🚀
-#         uses: SamKirkland/FTP-Deploy-Action@4.0.0
-#         with:
-#           server: ${{ secrets.FTP_SERVER_PROD }}
-#           username: ${{ secrets.FTP_USER_PROD }}
-#           password: ${{ secrets.FTP_PASSWORD_PROD }}
-#           local-dir: ./build/
+      - name: FTP Deploy 🚀
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.FTP_SERVER_PROD }}
+          username: ${{ secrets.FTP_USER_PROD }}
+          password: ${{ secrets.FTP_PASSWORD_PROD }}
+          local-dir: ./build/
