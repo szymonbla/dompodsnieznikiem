@@ -25,4 +25,4 @@ jobs:
           server: ${{ secrets.FTP_SERVER_PROD }}
           username: ${{ secrets.FTP_USER_PROD }}
           password: ${{ secrets.FTP_PASSWORD_PROD }}
-          local-dir: ./build/
+          local-dir: ./out/
