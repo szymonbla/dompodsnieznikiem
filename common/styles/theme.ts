@@ -12,16 +12,9 @@ const customBodyFontSize = (fontSize: number) => ({
 
 export const theme = createTheme({
   palette: {
-    mode: 'dark',
     common: {
       black: '#1A1A1A',
       white: '#FFFFFF'
-    },
-    primary: {
-      main: '#020E36',
-      contrastText: '#E1358D',
-      light: '#FEF0F0',
-      dark: '#020E36'
     },
     success: {
       main: '#008929'
@@ -32,12 +25,10 @@ export const theme = createTheme({
     error: {
       main: '#DA0027'
     },
-    text: {
-      primary: '#020E36',
-      secondary: '#BDBDBD'
-    },
-    secondary: {
-      main: '#9232E8'
+    grey: {
+      800: '#454749',
+      600: '#636363',
+      200: '#F7F7F7'
     }
   },
   typography: {

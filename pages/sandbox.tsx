@@ -6,7 +6,7 @@ const Sandbox = () => {
       <Typography
         variant="h2"
         fontWeight={400}
-        sx={{ color: 'common.white', letterSpacing: '2px', textTransform: 'uppercase' }}
+        sx={{ color: 'common.black', letterSpacing: '1.5px', fontWeight: 500, textTransform: 'uppercase' }}
       >
         Pod Śnieżnikiem
       </Typography>

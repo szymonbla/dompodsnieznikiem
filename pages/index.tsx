@@ -10,7 +10,6 @@ const Home: NextPage = () => {
         <meta name="description" content="Pod Śnieżnikiem - dom w górach wynajem" />
         <link rel="icon" href="/favicons/favicon.ico" />
       </Head>
-      <h2 style={{ color: '#000', letterSpacing: '1.5px', fontWeight: 500 }}>POD ŚNIEŻNIKIEM</h2>
     </Root>
   );
 };
