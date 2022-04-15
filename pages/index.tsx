@@ -1,21 +1,25 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import styled from '@emotion/styled';
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <Root>
       <Head>
         <title>Pod Śnieżnikiem</title>
-        <meta name="description" content="Pod Śnieżnikiem - domek w górach na wynajem" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Pod Śnieżnikiem - dom w górach wynajem" />
+        <link rel="icon" href="/favicons/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h3>Środowisko dev with fixed build path</h3>
-      </main>
-    </div>
+    </Root>
   );
 };
+
+const Root = styled('div')`
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #fef0f0;
+  margin: 0;
+  padding: 0;
+`;
 
 export default Home;
