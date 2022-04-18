@@ -32,7 +32,7 @@ export const NavLink = ({ href, label, typographVariant, hrefSx, typographySx }:
         <Typography
           variant={typographVariant}
           sx={{
-            color: 'common.black',
+            color: 'common.white',
             letterSpacing: '1.5px',
             fontWeight: 500,
             textTransform: 'uppercase',
