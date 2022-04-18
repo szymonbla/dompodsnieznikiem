@@ -1,6 +1,5 @@
 import { Grid } from '@mui/material';
 import Image from 'next/image';
-import BannerImage from './images/banner.jpg';
 
 export const BannerImageComponent = () => {
   return (
@@ -15,12 +14,11 @@ export const BannerImageComponent = () => {
       }}
     >
       <Image
-        src={BannerImage}
+        src="v1650283702/HomePage/banner_pf6s5q.jpg"
         layout="fill"
         alt="Baner dom pod śnieżnikiem"
         objectFit="cover"
         objectPosition="center"
-        placeholder="blur"
         quality={100}
         sizes="95vh"
         priority
