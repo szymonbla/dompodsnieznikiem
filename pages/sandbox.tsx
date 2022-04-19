@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material';
 
 import { Banner } from 'features/homeSections';
-import { Menu, Footer } from 'common/components';
+import { Menu, Footer } from 'layouts/components';
 
 const Sandbox = () => {
   return (

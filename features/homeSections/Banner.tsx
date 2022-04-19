@@ -1,10 +1,18 @@
 import { Grid, Typography } from '@mui/material';
+
 import { BannerImageComponent } from 'common/components';
 
 export const Banner = () => {
   return (
-    <Grid container justifyContent="flex-start" alignItems="center" sx={{ height: '90vh' }}>
+    <Grid
+      container
+      justifyContent="flex-start"
+      alignItems="center"
+      sx={{ height: '95vh', position: 'relative' }}
+      component="section"
+    >
       <Grid
+        item
         sx={{
           position: 'absolute',
           bottom: '0',
@@ -14,7 +22,14 @@ export const Banner = () => {
         }}
       />
       <BannerImageComponent />
-      <Grid item justifyContent="flex-start" alignItems="center" sx={{ px: '10%', maxWidth: '60%' }}>
+      <Grid
+        item
+        display="flex"
+        flexDirection="column"
+        justifyContent="flex-start"
+        alignItems="center"
+        sx={{ px: '10%', maxWidth: '60%' }}
+      >
         <Typography variant="h1" fontWeight={600} sx={{ color: 'common.white', pb: 2, textTransform: 'uppercase' }}>
           Dom pod śnieżnikiem
         </Typography>
