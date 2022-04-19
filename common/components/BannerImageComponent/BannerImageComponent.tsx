@@ -1,5 +1,6 @@
-import { Grid } from '@mui/material';
 import Image from 'next/image';
+
+import { Grid } from '@mui/material';
 
 export const BannerImageComponent = () => {
   return (

@@ -12,9 +12,24 @@ export const Footer = () => {
       justifyContent="space-evenly"
       alignItems="center"
       flexDirection="column"
-      sx={{ py: 2, width: '80%', height: '25vh' }}
+      sx={{ py: 2, height: '25vh' }}
+      component="footer"
     >
-      <Grid item display="flex" justifyContent="space-evenly" alignItems="center" sx={{ width: '100%' }}>
+      <Grid
+        item
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        sx={{
+          width: '100%',
+          '& > a': {
+            mr: '8rem',
+            '&:last-child ': {
+              mr: 0
+            }
+          }
+        }}
+      >
         {menuItems.map((menuItem, index) => {
           if (menuItem.href === RouteDefinitions.home) {
             return (
@@ -33,9 +48,9 @@ export const Footer = () => {
         })}
       </Grid>
       <Divider variant="middle" sx={{ width: '80%' }} />
-      <Grid item display="flex" justifyContent="center" sx={{ width: '100%', '& > svg': { mr: 2 } }}>
+      <Grid item display="flex" justifyContent="center" sx={{ width: '100%' }}>
         <a href={RouteDefinitions.facebookLink}>
-          <FacebookRoundedIcon sx={{ width: '2em', height: '2em', color: '#3b5998' }} />
+          <FacebookRoundedIcon sx={{ width: '2em', height: '2em', color: '#3b5998', mr: '0.5em' }} />
         </a>
         <a href={RouteDefinitions.instagramLink}>
           <InstagramIcon sx={{ width: '2em', height: '2em', color: '#C13584' }} />
