@@ -33,9 +33,9 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: ['Alata', 'Helvetica', '"Open Sans"', 'sans-serif'].join(','),
-    h1: customHeaderFontSize(70),
-    h2: customHeaderFontSize(46),
-    h3: customHeaderFontSize(48),
+    h1: customHeaderFontSize(58),
+    h2: customHeaderFontSize(48),
+    h3: customHeaderFontSize(42),
     h4: customHeaderFontSize(32),
     h5: customHeaderFontSize(24),
     h6: customHeaderFontSize(20),

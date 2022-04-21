@@ -1,6 +1,7 @@
+import Link from 'next/link';
+
 import { styled } from '@mui/material/styles';
 import { SxProps, Typography } from '@mui/material';
-import Link from 'next/link';
 
 interface NavLinkProps {
   href: string;
