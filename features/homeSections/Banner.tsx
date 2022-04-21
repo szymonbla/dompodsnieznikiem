@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid, Theme, Typography } from '@mui/material';
 
 import { BannerImageComponent } from 'common/components';
 
@@ -26,9 +26,13 @@ export const Banner = () => {
         item
         display="flex"
         flexDirection="column"
-        justifyContent="flex-start"
-        alignItems="center"
-        sx={{ px: '10%', maxWidth: '60%' }}
+        justifyContent="center"
+        alignItems="flex-start"
+        sx={(theme: Theme) => ({
+          px: '10%',
+          width: '60%',
+          [theme.breakpoints.down('md')]: { alignItems: 'center', width: '100%', mx: 2, px: 0 }
+        })}
       >
         <Typography variant="h1" fontWeight={600} sx={{ color: 'common.white', pb: 2, textTransform: 'uppercase' }}>
           Dom pod śnieżnikiem
