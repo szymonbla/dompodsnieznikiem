@@ -1,3 +1,3 @@
 export * from './NavLink';
 export * from './BannerImageComponent';
-export * from './Testimontal';
+export * from './Testimonials';

@@ -1,25 +1,27 @@
 import { Box, Theme, Typography } from '@mui/material';
 
-interface TestimontalProps {
+export interface TestimonialItemProps {
   quote: string;
   author: string;
   origin: string;
 }
 
-export const Testimontal = ({ quote, author, origin }: TestimontalProps) => {
+export const TestimonialItem = ({ quote, author, origin }: TestimonialItemProps) => {
   return (
     <Box
       sx={(theme: Theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        width: '25%',
         borderRadius: 3,
+        minWidth: '400px',
+        height: 'fit-content',
         py: 2,
         px: 4,
-        boxShadow: `${theme.palette.grey[600]} 0px 1px 4px`,
+        my: 4,
+        boxShadow: `${theme.palette.grey[600]} 0px 1px 2px`,
         [theme.breakpoints.down('md')]: {
-          width: '90%'
+          minWidth: '100%'
         }
       })}
     >
