@@ -9,35 +9,8 @@ Maybe you can mention me or this repo in the acknowledgements too
 <div align="center">
 <h1>DOM POD ŚNIEŻNIKIEM</h1>
 <h4>
-    <a href="https://github.com/Louis3797/awesome-readme-template/">View Demo</a>
+    <a href="http://dev-dps69.dompodsnieznikiem.pl/">View Demo</a>
 </div>
-
-<!-- Table of Contents -->
-
-# :notebook_with_decorative_cover: Table of Contents
-
-- [About the Project](#star2-about-the-project)
-  - [Screenshots](#camera-screenshots)
-  - [Tech Stack](#space_invader-tech-stack)
-  - [Features](#dart-features)
-  - [Color Reference](#art-color-reference)
-  - [Environment Variables](#key-environment-variables)
-- [Getting Started](#toolbox-getting-started)
-  - [Prerequisites](#bangbang-prerequisites)
-  - [Installation](#gear-installation)
-  - [Running Tests](#test_tube-running-tests)
-  - [Run Locally](#running-run-locally)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [Usage](#eyes-usage)
-- [Roadmap](#compass-roadmap)
-- [Contributing](#wave-contributing)
-  - [Code of Conduct](#scroll-code-of-conduct)
-- [FAQ](#grey_question-faq)
-- [License](#warning-license)
-- [Contact](#handshake-contact)
-- [Acknowledgements](#gem-acknowledgements)
-
-<!-- About the Project -->
 
 ## :star2: About the Project
 
@@ -45,8 +18,8 @@ Maybe you can mention me or this repo in the acknowledgements too
 
 ### :camera: Screenshots
 
-<div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+<div> 
+  <img src="https://user-images.githubusercontent.com/58032301/164995969-1831d9f9-0c0b-489a-8e5b-fa8546c95ceb.png" alt="screenshot" />
 </div>
 
 <!-- TechStack -->
