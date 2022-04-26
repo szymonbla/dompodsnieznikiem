@@ -1,20 +1,20 @@
 import { Box, Theme, Typography } from '@mui/material';
+import { TestimonialItemProps } from 'common/constants';
 
-export interface TestimonialItemProps {
-  quote: string;
-  author: string;
-  origin: string;
+interface CarouselTestimonialItem extends TestimonialItemProps {
+  currentIndex: number;
 }
 
-export const TestimonialItem = ({ quote, author, origin }: TestimonialItemProps) => {
+export const TestimonialItem = ({ quote, author, origin, slideId, currentIndex }: CarouselTestimonialItem) => {
   return (
     <Box
+      tabIndex={slideId}
       sx={(theme: Theme) => ({
+        transform: `translateX(-${currentIndex * 100}%)`,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         borderRadius: 3,
-        minWidth: '400px',
         height: 'fit-content',
         py: 2,
         px: 4,

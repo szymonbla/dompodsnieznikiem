@@ -1,69 +1,18 @@
-import { Box, Theme } from '@mui/material';
-import { TestimonialItem, TestimonialItemProps } from './TestimonialItem';
+import { useState, useEffect } from 'react';
+import { Box, Button, Theme } from '@mui/material';
+
+import { testimonialsItems } from 'common/constants';
+import { TestimonialItem } from './TestimonialItem';
 
 export const Testimonials = () => {
-  const testimonialsItems: TestimonialItemProps[] = [
-    {
-      quote:
-        'Przepiękne widoki, znakomita i śliczna lokalizacja. Cisza, spokój. Gospodarz zadbał o to, aby niczego nam nie brakowało. Zdjęcia nie oddają tego jak duży i wspaniały jest domek! ',
-      author: 'Michał Budniak',
-      origin: 'Opinia google'
-    },
-    {
-      quote:
-        'Bardzo długo szukałem takiego miejsca. Jest tu wszystko: świetny dom dla 3-4 rodzin, duży teren dookoła, który daje możliwość spędzania czasu zimą i latem i genialny widok z tarasu. Lokalizacja daje dużo możliwości o każdej porze roku. Do tego gospodarz, który naprawdę dba o komfort pobytu. Nie znam lepszego domku w górach na Dolnym Śląsku.',
-      author: 'Aleksandra Orzechowska',
-      origin: 'Opinia google'
-    },
-    {
-      quote:
-        'Wspaniałe miejsce, ciche, ciepłe i z pięknymi widokami. Dom wyposażony we wszystkie sprzęty i naczynia, można poczuć się jak we własnym.W okolicy wiele szlaków pieszych i rowerowych. Gorąco polecam !',
-      author: 'Aleksandra Orzechowska',
-      origin: 'Opinia google'
-    },
-    {
-      quote:
-        'Bardzo długo szukałem takiego miejsca. Jest tu wszystko: świetny dom dla 3-4 rodzin, duży teren dookoła, który daje możliwość spędzania czasu zimą i latem i genialny widok z tarasu. Lokalizacja daje dużo możliwości o każdej porze roku. Do tego gospodarz, który naprawdę dba o komfort pobytu. Nie znam lepszego domku w górach na Dolnym Śląsku.',
-      author: 'Aleksandra Orzechowska',
-      origin: 'Opinia google'
-    },
-    {
-      quote:
-        'Wspaniałe miejsce, ciche, ciepłe i z pięknymi widokami. Dom wyposażony we wszystkie sprzęty i naczynia, można poczuć się jak we własnym.W okolicy wiele szlaków pieszych i rowerowych. Gorąco polecam !',
-      author: 'Aleksandra Orzechowska',
-      origin: 'Opinia google'
-    },
-    {
-      quote:
-        'Bardzo długo szukałem takiego miejsca. Jest tu wszystko: świetny dom dla 3-4 rodzin, duży teren dookoła, który daje możliwość spędzania czasu zimą i latem i genialny widok z tarasu. Lokalizacja daje dużo możliwości o każdej porze roku. Do tego gospodarz, który naprawdę dba o komfort pobytu. Nie znam lepszego domku w górach na Dolnym Śląsku.',
-      author: 'Aleksandra Orzechowska',
-      origin: 'Opinia google'
-    },
-    {
-      quote:
-        'Wspaniałe miejsce, ciche, ciepłe i z pięknymi widokami. Dom wyposażony we wszystkie sprzęty i naczynia, można poczuć się jak we własnym.W okolicy wiele szlaków pieszych i rowerowych. Gorąco polecam !',
-      author: 'Aleksandra Orzechowska',
-      origin: 'Opinia google'
-    },
-    {
-      quote:
-        'Bardzo długo szukałem takiego miejsca. Jest tu wszystko: świetny dom dla 3-4 rodzin, duży teren dookoła, który daje możliwość spędzania czasu zimą i latem i genialny widok z tarasu. Lokalizacja daje dużo możliwości o każdej porze roku. Do tego gospodarz, który naprawdę dba o komfort pobytu. Nie znam lepszego domku w górach na Dolnym Śląsku.',
-      author: 'Aleksandra Orzechowska',
-      origin: 'Opinia google'
-    },
-    {
-      quote:
-        'Wspaniałe miejsce, ciche, ciepłe i z pięknymi widokami. Dom wyposażony we wszystkie sprzęty i naczynia, można poczuć się jak we własnym.W okolicy wiele szlaków pieszych i rowerowych. Gorąco polecam !',
-      author: 'Aleksandra Orzechowska',
-      origin: 'Opinia google'
-    },
-    {
-      quote:
-        'Bardzo długo szukałem takiego miejsca. Jest tu wszystko: świetny dom dla 3-4 rodzin, duży teren dookoła, który daje możliwość spędzania czasu zimą i latem i genialny widok z tarasu. Lokalizacja daje dużo możliwości o każdej porze roku. Do tego gospodarz, który naprawdę dba o komfort pobytu. Nie znam lepszego domku w górach na Dolnym Śląsku.',
-      author: 'Aleksandra Orzechowska',
-      origin: 'Opinia google'
-    }
-  ];
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [length, setLength] = useState(testimonialsItems.length);
+
+  const testimonialsLength = testimonialsItems.length;
+  const showTestimonials = 4;
+  useEffect(() => {
+    setLength(testimonialsLength);
+  }, []);
 
   return (
     <Box
@@ -76,20 +25,43 @@ export const Testimonials = () => {
         width: '100%',
         gap: 4,
         mt: -2,
+        cursor: 'grab',
         [theme.breakpoints.down('md')]: {
           px: 2,
           justifyContent: 'unset'
         }
       })}
     >
-      {testimonialsItems.map((testimonialItem, index) => (
-        <TestimonialItem
-          quote={testimonialItem.quote}
-          author={testimonialItem.author}
-          origin={testimonialItem.origin}
-          key={index}
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: 4,
+          '& > *': {
+            minWidth: `calc(100% / ${showTestimonials})`
+          }
+        }}
+      >
+        <Button
+          type="submit"
+          sx={{ backgroundColor: 'black' }}
+          onClick={() => {
+            if (currentIndex < length - 1) {
+              setCurrentIndex((prev) => prev + 1);
+            }
+          }}
         />
-      ))}
+        {testimonialsItems.map((testimonialItem, index) => (
+          <TestimonialItem
+            currentIndex={currentIndex}
+            slideId={index}
+            quote={testimonialItem.quote}
+            author={testimonialItem.author}
+            origin={testimonialItem.origin}
+            key={index}
+          />
+        ))}
+      </Box>
     </Box>
   );
 };
