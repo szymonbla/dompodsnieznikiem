@@ -99,8 +99,3 @@ To deploy this project run
   <img src="https://contrib.rocks/image?repo=szymonbla/dompodsnieznikiem" />
 </a>
 
-## :handshake: Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/Louis3797/awesome-readme-template](https://github.com/Louis3797/awesome-readme-template)
