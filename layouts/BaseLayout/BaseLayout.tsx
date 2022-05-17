@@ -2,14 +2,14 @@ import { ReactNode } from 'react';
 import Head from 'next/head';
 
 import styled from '@emotion/styled';
-import { Grid } from '@mui/material';
+import { Grid, Theme } from '@mui/material';
 
 import { Footer, Menu } from 'layouts/components';
 
 interface BaseLayoutProps {
   metaContent: string;
-  title?: string;
   children: ReactNode;
+  title?: string;
 }
 
 export const BaseLayout = ({ children, metaContent, title }: BaseLayoutProps) => {
@@ -20,12 +20,7 @@ export const BaseLayout = ({ children, metaContent, title }: BaseLayoutProps) =>
         <meta name="description" content={metaContent} />
         <link rel="icon" href="/favicons/favicon.ico" />
       </Head>
-      <Grid
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        sx={{ display: 'flex', width: '100%', flexDirection: 'column' }}
-      >
+      <Grid display="flex" justifyContent="center" alignItems="center" flexDirection="column" sx={{ width: '100vw' }}>
         <Menu />
         <Grid
           item
@@ -34,7 +29,7 @@ export const BaseLayout = ({ children, metaContent, title }: BaseLayoutProps) =>
             top: '0',
             width: '100%',
             height: '3%',
-            background: 'linear-gradient(to bottom,black, transparent);'
+            background: 'linear-gradient(to bottom, black , transparent)'
           }}
         />
         {children}

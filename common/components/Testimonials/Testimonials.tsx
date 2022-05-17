@@ -1,63 +1,62 @@
-import { useState, useEffect } from 'react';
-import { Box, Button, Theme } from '@mui/material';
+import { useState, useEffect, useCallback } from 'react';
+
+import { Box, Theme } from '@mui/material';
 
 import { testimonialsItems } from 'common/constants';
 import { TestimonialItem } from './TestimonialItem';
 
 export const Testimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [length, setLength] = useState(testimonialsItems.length);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const testimonialWidth = 400;
 
-  const testimonialsLength = testimonialsItems.length;
-  const showTestimonials = 4;
+  const next = useCallback(() => {
+    if (activeIndex === testimonialsItems.length - 2) {
+      setActiveIndex(0);
+    }
+    setActiveIndex((prevState) => prevState + 1);
+  }, [activeIndex]);
+
   useEffect(() => {
-    setLength(testimonialsLength);
-  }, []);
+    setTimeout(() => next(), 3000);
+  }, [next]);
 
   return (
     <Box
       sx={(theme: Theme) => ({
         display: 'flex',
-        justifyContent: 'center',
         overflow: 'hidden',
         margin: '0 auto',
-        position: 'relative',
         width: '100%',
-        gap: 4,
+        position: 'relative',
         mt: -2,
-        cursor: 'grab',
         [theme.breakpoints.down('md')]: {
           px: 2,
-          justifyContent: 'unset'
+          justifyContent: 'unset',
+          gap: 0
         }
       })}
     >
       <Box
-        sx={{
+        sx={(theme: Theme) => ({
+          width: `${testimonialsItems.length * testimonialWidth}px`,
+          transform: `translateX(-${activeIndex * testimonialWidth}px)`,
+          transition: 'transform ease-out 1s',
           display: 'flex',
-          justifyContent: 'center',
           gap: 4,
-          '& > *': {
-            minWidth: `calc(100% / ${showTestimonials})`
+          [theme.breakpoints.down('md')]: {
+            px: 2,
+            justifyContent: 'unset',
+            width: '100%',
+            transform: `translateX(-${activeIndex * 100}%)`
           }
-        }}
+        })}
       >
-        <Button
-          type="submit"
-          sx={{ backgroundColor: 'black' }}
-          onClick={() => {
-            if (currentIndex < length - 1) {
-              setCurrentIndex((prev) => prev + 1);
-            }
-          }}
-        />
         {testimonialsItems.map((testimonialItem, index) => (
           <TestimonialItem
-            currentIndex={currentIndex}
-            slideId={index}
             quote={testimonialItem.quote}
             author={testimonialItem.author}
             origin={testimonialItem.origin}
+            slideId={index}
             key={index}
           />
         ))}

@@ -24,7 +24,7 @@ export const testimonialsItems: TestimonialItemProps[] = [
     slideId: 3,
     quote:
       'Wspaniałe miejsce, ciche, ciepłe i z pięknymi widokami. Dom wyposażony we wszystkie sprzęty i naczynia, można poczuć się jak we własnym.W okolicy wiele szlaków pieszych i rowerowych. Gorąco polecam !',
-    author: 'Aleksandra Orzechowska',
+    author: 'Michał Budniak',
     origin: 'Opinia google'
   },
   {
@@ -38,14 +38,14 @@ export const testimonialsItems: TestimonialItemProps[] = [
     slideId: 5,
     quote:
       'Wspaniałe miejsce, ciche, ciepłe i z pięknymi widokami. Dom wyposażony we wszystkie sprzęty i naczynia, można poczuć się jak we własnym.W okolicy wiele szlaków pieszych i rowerowych. Gorąco polecam !',
-    author: 'Aleksandra Orzechowska',
+    author: 'Michał Budniak',
     origin: 'Opinia google'
   },
   {
     slideId: 6,
     quote:
       'Bardzo długo szukałem takiego miejsca. Jest tu wszystko: świetny dom dla 3-4 rodzin, duży teren dookoła, który daje możliwość spędzania czasu zimą i latem i genialny widok z tarasu. Lokalizacja daje dużo możliwości o każdej porze roku. Do tego gospodarz, który naprawdę dba o komfort pobytu. Nie znam lepszego domku w górach na Dolnym Śląsku.',
-    author: 'Aleksandra Orzechowska',
+    author: 'Michał Budniak',
     origin: 'Opinia google'
   },
   {
@@ -59,7 +59,7 @@ export const testimonialsItems: TestimonialItemProps[] = [
     slideId: 8,
     quote:
       'Bardzo długo szukałem takiego miejsca. Jest tu wszystko: świetny dom dla 3-4 rodzin, duży teren dookoła, który daje możliwość spędzania czasu zimą i latem i genialny widok z tarasu. Lokalizacja daje dużo możliwości o każdej porze roku. Do tego gospodarz, który naprawdę dba o komfort pobytu. Nie znam lepszego domku w górach na Dolnym Śląsku.',
-    author: 'Aleksandra Orzechowska',
+    author: 'Michał Budniak',
     origin: 'Opinia google'
   },
   {
@@ -73,7 +73,7 @@ export const testimonialsItems: TestimonialItemProps[] = [
     slideId: 10,
     quote:
       'Bardzo długo szukałem takiego miejsca. Jest tu wszystko: świetny dom dla 3-4 rodzin, duży teren dookoła, który daje możliwość spędzania czasu zimą i latem i genialny widok z tarasu. Lokalizacja daje dużo możliwości o każdej porze roku. Do tego gospodarz, który naprawdę dba o komfort pobytu. Nie znam lepszego domku w górach na Dolnym Śląsku.',
-    author: 'Aleksandra Orzechowska',
+    author: 'Michał Budniak',
     origin: 'Opinia google'
   }
 ];

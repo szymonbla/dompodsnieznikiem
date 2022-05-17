@@ -14,11 +14,11 @@ export const Banner = () => {
       <Grid
         item
         sx={{
-          position: 'absolute',
-          bottom: '0',
           width: '100%',
           height: '20%',
-          background: 'linear-gradient(to top,white, transparent);'
+          bottom: '0',
+          position: 'absolute',
+          background: 'linear-gradient(to top,white, transparent)'
         }}
       />
       <BannerImageComponent />
