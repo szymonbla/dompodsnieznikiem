@@ -17,7 +17,7 @@ export const Testimonials = () => {
   }, [activeIndex]);
 
   useEffect(() => {
-    setTimeout(() => next(), 3000);
+    setTimeout(() => next(), 6000);
   }, [next]);
 
   return (
