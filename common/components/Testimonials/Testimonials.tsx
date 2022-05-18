@@ -28,7 +28,6 @@ export const Testimonials = () => {
         margin: '0 auto',
         width: '100%',
         position: 'relative',
-        mt: -2,
         [theme.breakpoints.down('md')]: {
           px: 2,
           justifyContent: 'unset',

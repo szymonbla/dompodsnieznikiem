@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 import Head from 'next/head';
 
+import { Grid } from '@mui/material';
 import styled from '@emotion/styled';
-import { Grid, Theme } from '@mui/material';
 
 import { Footer, Menu } from 'layouts/components';
 
@@ -20,7 +20,7 @@ export const BaseLayout = ({ children, metaContent, title }: BaseLayoutProps) =>
         <meta name="description" content={metaContent} />
         <link rel="icon" href="/favicons/favicon.ico" />
       </Head>
-      <Grid display="flex" justifyContent="center" alignItems="center" flexDirection="column" sx={{ width: '100vw' }}>
+      <Grid display="flex" justifyContent="center" alignItems="center" flexDirection="column" sx={{ width: '100%' }}>
         <Menu />
         <Grid
           item
