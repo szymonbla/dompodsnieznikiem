@@ -20,7 +20,6 @@ export const BannerImageComponent = () => {
         alt="Baner dom pod śnieżnikiem"
         objectFit="cover"
         objectPosition="center"
-        quality={100}
         sizes="95vh"
         priority
       />
