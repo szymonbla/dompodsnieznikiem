@@ -38,7 +38,7 @@ export const Banner = () => {
           Dom pod śnieżnikiem
         </Typography>
         <Typography variant="h2" sx={{ color: 'common.white' }}>
-          Miejsce dla tych, którzy pragną wypocząć w ciszy i spokoju
+          Ciesz się wypoczynkiem w ciszy i spokoju
         </Typography>
       </Grid>
     </Grid>
