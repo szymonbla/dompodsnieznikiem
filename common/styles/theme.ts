@@ -40,10 +40,9 @@ export const theme = createTheme({
     h5: customHeaderFontSize(24),
     h6: customHeaderFontSize(20),
 
-    subtitle1: customBodyFontSize(20),
     subtitle2: customBodyFontSize(18),
 
-    body1: customBodyFontSize(16),
-    body2: customBodyFontSize(14)
+    body1: customBodyFontSize(20),
+    body2: customBodyFontSize(18)
   }
 });

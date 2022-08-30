@@ -1,4 +1,4 @@
-import { AvatarGroup, Button, Grid, Typography, Avatar } from '@mui/material';
+import {  Button, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
 export const TopWelcome = () => {
