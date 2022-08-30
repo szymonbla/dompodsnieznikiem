@@ -57,8 +57,8 @@ export const AboutHome = () => {
           O domku
         </Typography>
         <Grid item display="flex" gap={4} sx={{ mb: 2 }}>
-          {iconsArray.map((iconItem) => (
-            <IconWithValue src={iconItem.src} alt={iconItem.alt} value={iconItem.value} key={iconItem.alt} />
+          {iconsArray.map(({ src, alt, value }) => (
+            <IconWithValue src={src} alt={alt} value={value} key={alt} />
           ))}
         </Grid>
         <Typography

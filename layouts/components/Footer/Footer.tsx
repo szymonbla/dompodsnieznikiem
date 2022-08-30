@@ -1,6 +1,5 @@
 import { Grid, Divider, Typography } from '@mui/material';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
-import InstagramIcon from '@mui/icons-material/Instagram';
 
 import { RouteDefinitions, menuItems } from 'common/constants';
 import { NavLink } from 'common/components';
@@ -51,9 +50,6 @@ export const Footer = () => {
       <Grid item display="flex" justifyContent="center" sx={{ width: '100%' }}>
         <a href={RouteDefinitions.facebookLink}>
           <FacebookRoundedIcon sx={{ width: '2em', height: '2em', color: '#3b5998', mr: '0.5em' }} />
-        </a>
-        <a href={RouteDefinitions.instagramLink}>
-          <InstagramIcon sx={{ width: '2em', height: '2em', color: '#C13584' }} />
         </a>
       </Grid>
       <Typography>&copy; 2020-2022 Copyrights.</Typography>

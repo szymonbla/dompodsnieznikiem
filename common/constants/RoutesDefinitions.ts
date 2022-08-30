@@ -3,6 +3,5 @@ export const RouteDefinitions = {
   house: '/home',
   aboutUs: '/o-nas',
 
-  facebookLink: 'https://www.facebook.com/DomPodSnieznikiem',
-  instagramLink: 'https://www.facebook.com/DomPodSnieznikiem'
+  facebookLink: 'https://www.facebook.com/DomPodSnieznikiem'
 };

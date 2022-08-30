@@ -6,19 +6,12 @@ import { RouteDefinitions, menuItems } from 'common/constants';
 export const Menu = () => {
   return (
     <Grid
-      container
+      display="flex"
       justifyContent="center"
       alignItems="center"
       sx={{
-        zIndex: 10,
-        position: 'absolute',
-        top: 25,
-        '& > a': {
-          mr: '8rem',
-          '&:last-child ': {
-            mr: 0
-          }
-        }
+        width: '100%',
+        pt: '3em'
       }}
       component="header"
     >
