@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import { AboutDivider } from 'common/components/AboutHome';
 import { InHouseTile } from 'common/components/InTheHouse';
 export const InHouse = () => {
@@ -20,7 +20,11 @@ export const InHouse = () => {
       >
         <Grid display="flex" flexDirection="column" alignItems="center" sx={{ mb: 5 }}>
           <Typography variant="h2" sx={{ mb: '1.5rem' }}>
-            Co zawiera domek?
+            Co{' '}
+            <Box component="span" sx={{ color: 'action.active', fontWeight: 900 }}>
+              zawiera{' '}
+            </Box>
+            domek?
           </Typography>
           <Typography textAlign="center" sx={{ width: '80%' }}>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
