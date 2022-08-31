@@ -25,6 +25,19 @@ export const theme = createTheme({
     error: {
       main: '#DA0027'
     },
+    background: {
+      default: '#fef6e4'
+    },
+    action: {
+      active: '#f582ae'
+    },
+    primary: {
+      main: '#f3d2c1'
+    },
+    text: {
+      primary: '#172c66',
+      secondary: '#001858'
+    },
     grey: {
       800: '#454749',
       600: '#636363',

@@ -1,21 +1,20 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, SvgIcon } from '@mui/material';
 import { BenefitComponentProps } from 'common/constants/benefits';
-import LandscapeIcon from '@mui/icons-material/Landscape';
 
-export const BenefitComponent = ({ title, description }: BenefitComponentProps) => {
+export const BenefitComponent = ({ icon, title, description }: BenefitComponentProps) => {
   return (
     <Grid
       display="flex"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      sx={{ '& > *': { mb: '1em' } }}
+      sx={{ '& > *': { marginBottom: '1rem !important' } }}
     >
-      <LandscapeIcon sx={{ width: '3em', height: '3em' }} />
-      <Typography variant="h4" fontWeight={600}>
+      <SvgIcon component={icon} sx={{ fill: 'transparent', width: '3em', height: '3em ' }} />
+      <Typography variant="h4" fontWeight={600} color="text.secondary">
         {title}
       </Typography>
-      <Typography sx={{ width: '70%' }}>{description}</Typography>
+      <Typography sx={{ width: '70%', textAlign: 'center' }}>{description}</Typography>
     </Grid>
   );
 };
