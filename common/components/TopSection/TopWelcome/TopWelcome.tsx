@@ -1,4 +1,4 @@
-import {  Button, Grid, Typography } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 
 export const TopWelcome = () => {
@@ -12,17 +12,20 @@ export const TopWelcome = () => {
         '& > *': { mt: 4 }
       }}
     >
-      <Typography variant="h1" sx={{ color: 'common.black' }}>
-        Wypocznij w ciszym domku otoczony{' '}
-        <Box component="span" sx={{ color: '#506D84' }}>
-          przyrodą
+      <Typography variant="h1">
+        Wypoczynek w spokoju wokoł{' '}
+        <Box component="span" sx={{ color: 'action.active', fontWeight: 900 }}>
+          przyrody
         </Box>
       </Typography>
-      <Typography fontSize="1.2rem" sx={{ color: 'common.black', mt: 4 }}>
-        Ciesz się rodzinną atmosferą, widokami i wdziękiem Kotliny Kłodzkiej. Zapytaj o termin i korzystaj z wypoczynku!
+      <Typography fontSize="1.2rem" sx={{ mt: 4 }}>
+        Ciesz się rodzinną atmosferą, ciszą i wdziękiem Kotliny Kłodzkiej. Zapytaj o termin i wypocznij!
       </Typography>
       <Grid>
-        <Button variant="contained" sx={{ backgroundColor: '#506D84', fontSize: 'subtitle1', p: 2, px: 4 }}>
+        <Button
+          variant="contained"
+          sx={{ color: 'common.white', backgroundColor: 'text.secondary', fontSize: 'subtitle1', p: 2, px: 4 }}
+        >
           Chcę wypocząć
         </Button>
       </Grid>

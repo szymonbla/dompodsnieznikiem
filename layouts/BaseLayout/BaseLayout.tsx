@@ -14,7 +14,7 @@ interface BaseLayoutProps {
 
 export const BaseLayout = ({ children, metaContent, title }: BaseLayoutProps) => {
   return (
-    <Root id='page-content'>
+    <Root id="page-content">
       <Head>
         <title>{title ?? 'Pod Śnieżnikiem'}</title>
         <meta name="description" content={metaContent} />
@@ -23,7 +23,7 @@ export const BaseLayout = ({ children, metaContent, title }: BaseLayoutProps) =>
       <Grid display="flex" justifyContent="center" alignItems="center" flexDirection="column" sx={{ width: '100%' }}>
         <Menu />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </Grid>
     </Root>
   );
@@ -35,5 +35,4 @@ const Root = styled('main')`
   margin: 0;
   padding: 0;
   position: relative;
-  background-color: #f3d5c0;
 `;
