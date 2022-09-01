@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { AboutDivider } from 'common/components/AboutHome';
 import { InHouseTile } from 'common/components/InTheHouse';
+import { InHouseList } from 'common/constants/inhouse';
 export const InHouse = () => {
   return (
     <Grid
@@ -30,9 +31,11 @@ export const InHouse = () => {
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           </Typography>
         </Grid>
-        <InHouseTile />
-        <InHouseTile />
-        <InHouseTile />
+        <Grid sx={{ '& > div:nth-child(even)': { flexDirection: 'row-reverse' } }}>
+          {InHouseList.map((props) => (
+            <InHouseTile {...props} key={props.title} />
+          ))}
+        </Grid>
       </Grid>
     </Grid>
   );
