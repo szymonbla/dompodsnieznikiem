@@ -2,7 +2,7 @@ import { Box, Grid, Typography } from '@mui/material';
 
 export const ReviewIntro = () => {
   return (
-    <Grid sx={{ width: '50%', position: 'sticky', top: '6rem', mr: '7%', '& > *': { mb: 2 } }}>
+    <Grid sx={{ height: 'min-content', width: '50%', position: 'sticky', top: '6rem', mr: '7%', '& > *': { mb: 2 } }}>
       <Typography variant="h2">
         Czekaj! Jeszcze{' '}
         <Box component="span" sx={{ color: 'action.active', fontWeight: 900 }}>

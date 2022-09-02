@@ -1,9 +1,13 @@
-import { Grid } from '@mui/material';
+import { Grid, SxProps } from '@mui/material';
 import WaveDivider from 'common/icons/wave.svg';
 
-export const AboutDivider = () => {
+interface AboutDividerProps {
+  sx?: SxProps;
+}
+
+export const AboutDivider = ({ sx }: AboutDividerProps) => {
   return (
-    <Grid sx={{ mb: -1 }}>
+    <Grid sx={{ ...sx }}>
       <WaveDivider />
     </Grid>
   );

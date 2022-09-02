@@ -1,9 +1,10 @@
 import { Grid, Rating, SvgIcon, Typography } from '@mui/material';
 import { ReviewTileProps } from 'common/constants/reviews';
 
-export const ReviewTile = ({ review, rating, sourceIcon }: ReviewTileProps) => {
+export const ReviewTile = ({ review, ratingValue, sourceIcon, reviewLink }: ReviewTileProps) => {
   return (
     <Grid
+      className="test"
       sx={{
         width: '100%',
         color: 'common.white',
@@ -17,10 +18,10 @@ export const ReviewTile = ({ review, rating, sourceIcon }: ReviewTileProps) => {
     >
       <Typography>{review}</Typography>
       <Grid display="flex" justifyContent="space-between" alignItems="center" sx={{ position: 'relative' }}>
-        <a href="https://goo.gl/maps/Eys3XeADN3gZxUXJ7">
+        <a href={reviewLink}>
           <SvgIcon component={sourceIcon} inheritViewBox sx={{ width: '5em', height: '3em' }} />
         </a>
-        <Rating name="no-value" value={5} readOnly />
+        <Rating name="no-value" value={ratingValue} readOnly />
       </Grid>
     </Grid>
   );
