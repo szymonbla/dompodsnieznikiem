@@ -17,10 +17,10 @@ export const InHouse = () => {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        sx={{ backgroundColor: 'primary.main', pb: '2em' }}
+        sx={{ backgroundColor: 'primary.main', pb: '3em' }}
       >
         <Grid display="flex" flexDirection="column" alignItems="center" sx={{ mb: 5 }}>
-          <Typography variant="h2" sx={{ mb: '1.5rem' }}>
+          <Typography variant="h2" sx={{ my: '1.5rem' }}>
             Co{' '}
             <Box component="span" sx={{ color: 'action.active', fontWeight: 900 }}>
               zawiera{' '}
