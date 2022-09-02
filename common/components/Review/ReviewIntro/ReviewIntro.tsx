@@ -10,8 +10,8 @@ export const ReviewIntro = () => {
         </Box>
       </Typography>
       <Typography variant="subtitle2" lineHeight={1.8}>
-        Each color portrays a different feeling or emotion, and by understanding the psychology of color, you can choose
-        a color that will resonate with your target audience and give off the vibe & emotion you want.
+        Dom Pod Śnieżniem jest prowadzony od 4 lat. Został zweryfikowany przez blisko 1000 klientów. Nie zwlekaj i
+        sprawdź na własnej skórze.
       </Typography>
     </Grid>
   );

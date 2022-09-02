@@ -1,5 +1,6 @@
 import { Grid, Typography, SvgIcon } from '@mui/material';
-import { BenefitComponentProps } from 'common/constants/benefits';
+
+import { BenefitComponentProps } from 'common/constants';
 
 export const BenefitComponent = ({ icon, title, description }: BenefitComponentProps) => {
   return (

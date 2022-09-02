@@ -1,6 +1,7 @@
 import { Grid } from '@mui/material';
+
+import { reviewTiles } from 'common/constants';
 import { ReviewTile } from './ReviewTile';
-import { reviewTiles } from 'common/constants/reviews';
 
 export const ReviewCarousel = () => {
   return (

@@ -1,38 +1,22 @@
 import { ReactNode } from 'react';
-import Head from 'next/head';
-
-import { Grid } from '@mui/material';
-import styled from '@emotion/styled';
-
-import { Footer, Menu } from 'layouts/components';
+import { Grid, SxProps } from '@mui/material';
 
 interface BaseLayoutProps {
-  metaContent: string;
   children: ReactNode;
-  title?: string;
+  sx?: SxProps;
 }
 
-export const BaseLayout = ({ children, metaContent, title }: BaseLayoutProps) => {
+export const BaseLayout = ({ children, sx }: BaseLayoutProps) => {
   return (
-    <Root id="page-content">
-      <Head>
-        <title>{title ?? 'Pod Śnieżnikiem'}</title>
-        <meta name="description" content={metaContent} />
-        <link rel="icon" href="/favicons/favicon.ico" />
-      </Head>
-      <Grid display="flex" justifyContent="center" alignItems="center" flexDirection="column" sx={{ width: '100%' }}>
-        <Menu />
-        {children}
-        <Footer />
-      </Grid>
-    </Root>
+    <Grid
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      flexDirection="column"
+      component="section"
+      sx={{ width: '100%', height: '100%', py: '4rem', ...sx }}
+    >
+      {children}
+    </Grid>
   );
 };
-
-const Root = styled('main')`
-  min-height: 100vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-`;

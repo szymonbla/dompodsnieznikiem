@@ -1,8 +1,9 @@
-import { Grid, Typography } from '@mui/material';
 import Image from 'next/image';
-import { InHouseItem } from 'common/constants/inhouse';
+import { Grid, Typography } from '@mui/material';
 
-export const InHouseTile = ({ title, description, image }: InHouseItem) => {
+import { InHouseItem } from 'common/constants';
+
+export const InHouseTile = ({ title, description, image, altImage }: InHouseItem) => {
   return (
     <Grid display="flex" sx={{ backgroundColor: 'background.default', maxWidth: '1250px', my: 5, p: 5 }}>
       <Grid display="flex" flexDirection="column" justifyContent="center" sx={{ width: '50%' }}>
@@ -11,8 +12,8 @@ export const InHouseTile = ({ title, description, image }: InHouseItem) => {
         </Typography>
         <Typography>{description}</Typography>
       </Grid>
-      <Grid sx={{ width: '50%', px: '1.5rem' }}>
-        <Image src={image} alt="Baner dom pod śnieżnikiem" width={700} height={500} />
+      <Grid display="flex" justifyContent="center" alignItems="center" sx={{ width: '50%', px: '1.5rem' }}>
+        <Image src={image} alt={altImage} width={500} height={400} />
       </Grid>
     </Grid>
   );

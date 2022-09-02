@@ -1,7 +1,13 @@
-import { Box, Button, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 
-export const CTAsection = () => {
+import { Box, Grid, Typography } from '@mui/material';
+
+import { CTAButton } from 'common/components/Shared';
+
+export const OutroComponent = () => {
+  const handleClick = () => {
+    console.log('But Wait… There’s More!');
+  };
   return (
     <Grid
       display="flex"
@@ -29,12 +35,7 @@ export const CTAsection = () => {
           Wszystko, co potrzebujesz znajdziesz w tym domu. Pozwól sobie na odpoczynek i spędź czas wśród przyrody.
           Oszczędzaj czas podejmując świadome decyzje.
         </Typography>
-        <Button
-          variant="contained"
-          sx={{ color: 'common.white', backgroundColor: 'text.primary', fontSize: 'subtitle1', p: 2, px: 4 }}
-        >
-          Chcę wypocząć
-        </Button>
+        <CTAButton label="Chcę wypocząć" handleClick={handleClick} />
       </Grid>
     </Grid>
   );
