@@ -11,7 +11,7 @@ export const InHouse = () => {
       sx={{ width: '100%', height: '100%', pb: '4rem', position: 'relative' }}
       component="section"
     >
-      <AboutDivider />
+      <AboutDivider sx={{ mb: -1 }} />
       <Grid
         display="flex"
         flexDirection="column"
@@ -37,6 +37,7 @@ export const InHouse = () => {
           ))}
         </Grid>
       </Grid>
+      <AboutDivider sx={{ mt: -1, transform: 'rotate(180deg)' }} />
     </Grid>
   );
 };
