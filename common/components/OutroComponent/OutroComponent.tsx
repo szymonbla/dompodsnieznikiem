@@ -5,6 +5,9 @@ import { Box, Grid, Typography } from '@mui/material';
 import { CTAButton } from 'common/components/Shared';
 
 export const OutroComponent = () => {
+  const handleClick = () => {
+    console.log('But Wait… There’s More!');
+  };
   return (
     <Grid
       display="flex"
@@ -32,7 +35,7 @@ export const OutroComponent = () => {
           Wszystko, co potrzebujesz znajdziesz w tym domu. Pozwól sobie na odpoczynek i spędź czas wśród przyrody.
           Oszczędzaj czas podejmując świadome decyzje.
         </Typography>
-        <CTAButton label="Chcę wypocząć" />
+        <CTAButton label="Chcę wypocząć" onClick={handleClick} />
       </Grid>
     </Grid>
   );
