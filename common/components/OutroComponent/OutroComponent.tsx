@@ -35,7 +35,7 @@ export const OutroComponent = () => {
           Wszystko, co potrzebujesz znajdziesz w tym domu. Pozwól sobie na odpoczynek i spędź czas wśród przyrody.
           Oszczędzaj czas podejmując świadome decyzje.
         </Typography>
-        <CTAButton label="Chcę wypocząć" onClick={handleClick} />
+        <CTAButton label="Chcę wypocząć" handleClick={handleClick} />
       </Grid>
     </Grid>
   );
