@@ -1,21 +1,17 @@
 import type { NextPage } from 'next';
 
-import { BaseLayout } from 'layouts/BaseLayout';
-import { TopSection } from 'features/topSection/TopSection';
-import { Benefits } from 'features/benefits/Benetits';
-import { InHouse } from 'features/inHouse/InHouse';
-import { Reviews } from 'features/reviews/Reviews';
-import { CallToActionSection } from 'features/CallToActionSection/CallToActionSection';
+import { PageLayout } from 'layouts';
+import { TopSection, Benefits, InHouse, Outro, Reviews } from 'features';
 
 const Home: NextPage = () => {
   return (
-    <BaseLayout metaContent="Dom pod Śnieżnikiem">
+    <PageLayout metaContent="Dom pod Śnieżnikiem">
       <TopSection />
       <Benefits />
       <InHouse />
       <Reviews />
-      <CallToActionSection />
-    </BaseLayout>
+      <Outro />
+    </PageLayout>
   );
 };
 

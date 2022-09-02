@@ -1,5 +1,6 @@
 import { Grid, Rating, SvgIcon, Typography } from '@mui/material';
-import { ReviewTileProps } from 'common/constants/reviews';
+
+import { ReviewTileProps } from 'common/constants';
 
 export const ReviewTile = ({ review, ratingValue, sourceIcon, reviewLink }: ReviewTileProps) => {
   return (

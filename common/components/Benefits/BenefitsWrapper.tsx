@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import { BenefitComponent } from 'common/components/BenefitComponent/BenefitComponent';
+import { BenefitComponent } from 'common/components';
 import { benefitsList } from 'common/constants';
 
 export const BenefitsComponent = () => {

@@ -1,5 +1,7 @@
-import { Button, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
+import { Grid, Typography } from '@mui/material';
+
+import { CTAButton } from 'common/components/Shared';
 
 export const TopWelcome = () => {
   return (
@@ -22,12 +24,7 @@ export const TopWelcome = () => {
         Ciesz się rodzinną atmosferą, ciszą i wdziękiem Kotliny Kłodzkiej. Zapytaj o termin i wypocznij!
       </Typography>
       <Grid>
-        <Button
-          variant="contained"
-          sx={{ color: 'common.white', backgroundColor: 'text.secondary', fontSize: 'subtitle1', p: 2, px: 4 }}
-        >
-          Chcę wypocząć
-        </Button>
+        <CTAButton label="Chcę wypocząć" />
       </Grid>
     </Grid>
   );
