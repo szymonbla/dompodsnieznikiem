@@ -9,10 +9,10 @@ export const InHouseTile = ({ title, description, image }: InHouseItem) => {
         <Typography variant="h4" fontWeight={900} sx={{ mb: '1.5rem' }}>
           {title}
         </Typography>
-        <Typography variant="body2">{description}</Typography>
+        <Typography>{description}</Typography>
       </Grid>
       <Grid sx={{ width: '50%', px: '1.5rem' }}>
-        <Image src={image} alt="Baner dom pod śnieżnikiem" width={700} height={500} priority />
+        <Image src={image} alt="Baner dom pod śnieżnikiem" width={700} height={500} />
       </Grid>
     </Grid>
   );
