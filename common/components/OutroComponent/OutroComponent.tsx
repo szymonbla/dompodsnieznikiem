@@ -3,11 +3,15 @@ import Image from 'next/image';
 import { Box, Grid, Typography } from '@mui/material';
 
 import { CTAButton } from 'common/components/Shared';
+import { useModal } from 'state';
 
 export const OutroComponent = () => {
-  const handleClick = () => {
-    console.log('But Wait… There’s More!');
+  const { updateModalState } = useModal();
+
+  const handleOpen = () => {
+    updateModalState({ isOpen: true });
   };
+
   return (
     <Grid
       display="flex"
@@ -35,7 +39,7 @@ export const OutroComponent = () => {
           Wszystko, co potrzebujesz znajdziesz w tym domu. Pozwól sobie na odpoczynek i spędź czas wśród przyrody.
           Oszczędzaj czas podejmując świadome decyzje.
         </Typography>
-        <CTAButton label="Chcę wypocząć" handleClick={handleClick} />
+        <CTAButton label="Chcę wypocząć" handleClick={handleOpen} />
       </Grid>
     </Grid>
   );

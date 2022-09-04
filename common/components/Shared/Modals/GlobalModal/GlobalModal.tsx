@@ -1,6 +1,7 @@
+import { ReactNode } from 'react';
+
 import { Box, Modal, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import { ReactNode } from 'react';
 
 interface GlobalModalProps {
   title: string;

@@ -1,11 +1,14 @@
 import { Box } from '@mui/system';
 import { Grid, Typography } from '@mui/material';
+import { useModal } from 'state';
 
 import { CTAButton } from 'common/components/Shared';
 
 export const TopWelcome = () => {
-  const handleClick = () => {
-    console.log('But Wait… There’s More!');
+  const { updateModalState } = useModal();
+
+  const handleOpen = () => {
+    updateModalState({ isOpen: true });
   };
 
   return (
@@ -28,7 +31,7 @@ export const TopWelcome = () => {
         Ciesz się rodzinną atmosferą, ciszą i wdziękiem Kotliny Kłodzkiej. Zapytaj o termin i wypocznij!
       </Typography>
       <Grid>
-        <CTAButton label="Chcę wypocząć" handleClick={handleClick} />
+        <CTAButton label="Chcę wypocząć" handleClick={handleOpen} />
       </Grid>
     </Grid>
   );

@@ -1,12 +1,16 @@
 import { Typography, Grid } from '@mui/material';
 import { GlobalModal } from 'common/components/Shared/Modals/GlobalModal';
+import { useModal } from 'state';
+
 export const FormModal = () => {
+  const { isOpen, updateModalState } = useModal();
+
   const handleClose = () => {
-    console.log('Close');
+    updateModalState({ isOpen: !isOpen });
   };
 
   return (
-    <GlobalModal title="Zapytaj o dostępność" isOpen={true} handleClose={handleClose}>
+    <GlobalModal title="Zapytaj o dostępność" isOpen={isOpen} handleClose={handleClose}>
       <Grid>
         <Typography>Tutaj pola formularza</Typography>
       </Grid>
