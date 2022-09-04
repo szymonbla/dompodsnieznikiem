@@ -5,6 +5,7 @@ import { CacheProvider, EmotionCache } from '@emotion/react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 
 import { createEmotionCache, theme } from 'common';
+import { ModalContextProvider } from 'state';
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
@@ -21,8 +22,10 @@ const MyApp = (props: MyAppProps) => {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Component {...pageProps} />
+        <ModalContextProvider>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ModalContextProvider>
       </ThemeProvider>
     </CacheProvider>
   );
