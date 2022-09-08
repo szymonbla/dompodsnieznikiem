@@ -2,14 +2,16 @@ import { Button } from '@mui/material';
 
 interface CTAButtonProps {
   label: string;
-  handleClick: () => void;
+  type?: 'button' | 'submit' | 'reset' | undefined;
+  handleClick?: () => void;
 }
 
-export const CTAButton = ({ label, handleClick }: CTAButtonProps) => {
+export const CTAButton = ({ label, type, handleClick }: CTAButtonProps) => {
   return (
     <Button
       variant="contained"
       onClick={handleClick}
+      type={type}
       sx={{
         color: 'common.white',
         backgroundColor: 'text.secondary',
