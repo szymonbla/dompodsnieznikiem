@@ -13,7 +13,7 @@ export const InHouseTile = ({ title, description, image, altImage }: InHouseItem
         <Typography>{description}</Typography>
       </Grid>
       <Grid display="flex" justifyContent="center" alignItems="center" sx={{ width: '50%', px: '1.5rem' }}>
-        <Image src={image} alt={altImage} width={500} height={400} />
+        <Image src={image} alt={altImage} width={500} height={400} style={{ borderRadius: '8px' }} />
       </Grid>
     </Grid>
   );

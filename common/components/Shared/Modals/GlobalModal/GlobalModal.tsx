@@ -19,7 +19,7 @@ export const GlobalModal = ({ title, isOpen, handleClose, children }: GlobalModa
       aria-describedby="modal-modal-description"
       sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
     >
-      <Box sx={{ backgroundColor: 'grey.200', minWidth: '700px', p: '2rem', position: 'relative' }}>
+      <Box sx={{ backgroundColor: 'grey.200', minWidth: '400px', maxWidth: '500px', p: '2rem', position: 'relative' }}>
         <CloseIcon onClick={handleClose} sx={{ position: 'absolute', right: '2rem', top: '2rem', cursor: 'pointer' }} />
         <Typography variant="h4">{title}</Typography>
         {children}
