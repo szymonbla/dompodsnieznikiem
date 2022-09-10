@@ -4,3 +4,4 @@ export * from './InTheHouse';
 export * from './OutroComponent';
 export * from './TopSection';
 export * from './Review';
+export * from './BaseDatePicker';
