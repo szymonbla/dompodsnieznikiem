@@ -28,7 +28,7 @@ export const BasicDatePicker = ({
   value,
   minDate,
   name,
-  error = true,
+  error,
   helperText,
   setValue
 }: BasicDatePickerProps) => {
