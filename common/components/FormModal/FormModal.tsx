@@ -1,10 +1,15 @@
 /* eslint-disable no-undef */
 import React from 'react';
+
 import { Grid } from '@mui/material';
+import { send } from '@emailjs/browser';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
+
 import { GlobalModal } from 'common/components/Shared/Modals/GlobalModal';
-import { useModal } from 'state';
 import { RequestDateForm, FormValuesProps } from './RequestDateForm';
-import emailjs from '@emailjs/browser';
+import { dateMonthYearFormat } from 'common/constants';
+import { useModal } from 'state';
 
 export const FormModal = () => {
   const { isOpen, updateModalState } = useModal();
@@ -12,15 +17,20 @@ export const FormModal = () => {
     updateModalState({ isOpen: false });
   };
 
-  const handleSubmit = (values: FormValuesProps) => {
+  const handleSubmit = ({ email, name, startDate, endDate }: FormValuesProps) => {
     try {
-      emailjs.send(
+      const formValues = {
+        guestName: name,
+        responseEmail: email,
+        startDate: startDate?.format(dateMonthYearFormat),
+        endDate: endDate?.format(dateMonthYearFormat)
+      };
+      send(
         `${process.env.EMAIL_SERVICE_ID}`,
         `${process.env.EMAIL_TEMPLATE_ID}`,
-        { ...values },
+        formValues,
         `${process.env.EMAIL_PUBLIC_KEY}`
       );
-      console.log(values);
       updateModalState({ isOpen: false });
     } catch (error) {
       console.log(error);
@@ -29,9 +39,11 @@ export const FormModal = () => {
 
   return (
     <GlobalModal title="Zapytaj o dostępność" isOpen={isOpen} handleClose={handleClose}>
-      <Grid sx={{ width: '100%', mt: '2.5rem' }}>
-        <RequestDateForm handleSubmit={handleSubmit} />
-      </Grid>
+      <LocalizationProvider dateAdapter={AdapterMoment}>
+        <Grid sx={{ width: '100%', mt: '2.5rem' }}>
+          <RequestDateForm handleSubmit={handleSubmit} />
+        </Grid>
+      </LocalizationProvider>
     </GlobalModal>
   );
 };

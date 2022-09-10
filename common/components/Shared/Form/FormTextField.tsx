@@ -13,18 +13,26 @@ export const FormTextField = (props: TextFieldProps) => {
     <TextField
       {...props}
       name={name}
+      fullWidth
       InputLabelProps={{
         shrink: true
       }}
       sx={{
-        width: '100%',
         '& input': {
           color: 'text.secondary'
         },
-        '& label.Mui-focused': { color: 'text.primary', borderColor: 'text.primary' },
+        '& label.Mui-focused': {
+          color: 'text.primary'
+        },
+        '& label.Mui-error': {
+          color: 'error.main'
+        },
         '& .MuiOutlinedInput-root': {
           '&.Mui-focused fieldset': {
             borderColor: 'text.primary'
+          },
+          '&.Mui-error fieldset': {
+            borderColor: 'error.main'
           }
         },
         ...sx
