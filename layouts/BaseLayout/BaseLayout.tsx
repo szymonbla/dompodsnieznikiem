@@ -1,20 +1,27 @@
 import { ReactNode } from 'react';
 import { Grid, SxProps } from '@mui/material';
+import { Theme } from '@mui/system';
 
 interface BaseLayoutProps {
   children: ReactNode;
-  sx?: SxProps;
+  sx?: SxProps<Theme>;
 }
 
 export const BaseLayout = ({ children, sx }: BaseLayoutProps) => {
   return (
     <Grid
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      flexDirection="column"
       component="section"
-      sx={{ width: '100%', height: '100%', py: '4rem', ...sx }}
+      sx={(theme) => ({
+        display: 'flex',
+        width: '100%',
+        height: '100%',
+        py: '4rem',
+        justifyContent: 'center',
+        alignItems: 'center',
+        [theme.breakpoints.down('md')]: {
+          ...sx
+        }
+      })}
     >
       {children}
     </Grid>

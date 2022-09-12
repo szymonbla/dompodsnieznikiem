@@ -3,7 +3,7 @@ import { TopWelcome, TopImage } from 'common/components';
 
 export const TopSection = () => {
   return (
-    <BaseLayout sx={{ flexDirection: 'row', maxWidth: '80%' }}>
+    <BaseLayout sx={{ flexDirection: 'column', gap: 2 }}>
       <TopWelcome />
       <TopImage />
     </BaseLayout>
