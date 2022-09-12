@@ -15,11 +15,15 @@ export const TopWelcome = () => {
     <Grid
       display="flex"
       flexDirection="column"
-      sx={{
+      sx={(theme) => ({
         width: '50%',
         pr: 2,
-        '& > *': { mt: 4 }
-      }}
+        '& > *': { mt: 4 },
+        [theme.breakpoints.down('md')]: {
+          width: '100%',
+          textAlign: 'center'
+        }
+      })}
     >
       <Typography variant="h1">
         Wypoczynek w spokoju wokoł{' '}
