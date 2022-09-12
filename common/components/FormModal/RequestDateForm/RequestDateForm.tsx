@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import * as Yup from 'yup';
 import { Moment } from 'moment';
@@ -6,13 +6,14 @@ import { useFormik } from 'formik';
 import { Grid } from '@mui/material';
 
 import { FormTextField, CTAButton } from 'common/components/Shared';
-import { BasicDatePicker } from 'common/components';
+import { BasicDatePicker, BaseSlider } from 'common/components';
 
 export interface FormValuesProps {
   name: string;
   email: string;
   startDate: Moment | null;
   endDate: Moment | null;
+  guestsNumber: number;
 }
 interface RequestDateFormProps {
   // eslint-disable-next-line no-unused-vars
@@ -25,7 +26,8 @@ export const RequestDateForm = ({ handleSubmit }: RequestDateFormProps) => {
       name: '',
       email: '',
       startDate: null,
-      endDate: null
+      endDate: null,
+      guestsNumber: 1
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -47,6 +49,10 @@ export const RequestDateForm = ({ handleSubmit }: RequestDateFormProps) => {
     }),
     onSubmit: handleSubmit
   });
+
+  useEffect(() => {
+    console.log(formik.values);
+  }, [formik.values]);
 
   return (
     <form style={{ width: '100%' }} onSubmit={formik.handleSubmit}>
@@ -94,6 +100,7 @@ export const RequestDateForm = ({ handleSubmit }: RequestDateFormProps) => {
             helperText={formik.errors.endDate}
           />
         </Grid>
+        <BaseSlider name="guestsNumber" setValue={formik.setFieldValue} value={formik.values.guestsNumber} />
         <CTAButton type="submit" label="Zapytaj o termin" />
       </Grid>
     </form>
