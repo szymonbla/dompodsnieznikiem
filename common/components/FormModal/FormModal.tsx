@@ -17,13 +17,14 @@ export const FormModal = () => {
     updateModalState({ isOpen: false });
   };
 
-  const handleSubmit = ({ email, name, startDate, endDate }: FormValuesProps) => {
+  const handleSubmit = ({ email, name, startDate, endDate, guestsNumber }: FormValuesProps) => {
     try {
       const formValues = {
         guestName: name,
         responseEmail: email,
         startDate: startDate?.format(dateMonthYearFormat),
-        endDate: endDate?.format(dateMonthYearFormat)
+        endDate: endDate?.format(dateMonthYearFormat),
+        guestsNumber
       };
       send(
         `${process.env.EMAIL_SERVICE_ID}`,
