@@ -35,4 +35,5 @@ const Root = styled('main')`
   margin: 0;
   padding: 0;
   position: relative;
+  background-color: #fef6e4;
 `;
