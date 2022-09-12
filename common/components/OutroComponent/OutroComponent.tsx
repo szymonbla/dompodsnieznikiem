@@ -17,17 +17,29 @@ export const OutroComponent = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      sx={({ palette }) => ({
+      sx={({ palette, breakpoints }) => ({
         width: '1050px',
         border: `2px solid ${palette.text.primary}`,
         py: '2.5rem',
-        borderRadius: '12px'
+        borderRadius: '12px',
+        [breakpoints.down('md')]: {
+          width: '100%',
+          py: '1rem',
+          flexDirection: 'column-reverse'
+        }
       })}
     >
-      <Grid sx={{ width: '40%', px: '1.5rem' }}>
+      <Grid sx={(theme) => ({ width: '40%', px: '1.5rem', [theme.breakpoints.down('md')]: { width: '100%', px: 2 } })}>
         <Image src="v1652871547/HomePage/aboutHome_uiulv9.jpg" alt="Domek Pod Śnieżnikiem" width={500} height={350} />
       </Grid>
-      <Grid sx={{ width: '60%', px: '1.5rem', '& > *': { mb: '1.5rem !important' } }}>
+      <Grid
+        sx={(theme) => ({
+          width: '60%',
+          px: '1.5rem',
+          '& > *': { mb: '1.5rem !important' },
+          [theme.breakpoints.down('md')]: { width: '100%', textAlign: 'center' }
+        })}
+      >
         <Typography variant="h4" fontWeight={900}>
           Chcę{' '}
           <Box component="span" sx={{ color: 'action.active', fontWeight: 900 }}>

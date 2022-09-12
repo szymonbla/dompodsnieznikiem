@@ -9,7 +9,7 @@ export const TopImage = () => (
       borderRadius: 2,
       [theme.breakpoints.down('md')]: {
         width: '100%',
-        px: '1rem'
+        px: 2
       }
     })}
   >
