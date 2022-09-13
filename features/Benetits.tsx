@@ -1,6 +1,8 @@
 import { Grid, Typography } from '@mui/material';
+
 import { BenefitsComponent } from 'common/components/Benefits/BenefitsWrapper';
 import { BaseLayout } from 'layouts';
+
 export const Benefits = () => {
   return (
     <BaseLayout>

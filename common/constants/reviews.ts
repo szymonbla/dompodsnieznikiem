@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { SvgIconComponent } from '@mui/icons-material';
+
 import GoogleLogo from 'common/icons/googleLogo.svg';
 export interface ReviewTileProps {
   review: string;

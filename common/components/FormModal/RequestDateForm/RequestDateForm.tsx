@@ -27,7 +27,7 @@ export const RequestDateForm = ({ handleSubmit }: RequestDateFormProps) => {
       email: '',
       startDate: null,
       endDate: null,
-      guestsNumber: 1
+      guestsNumber: 6
     },
     validationSchema: Yup.object({
       name: Yup.string()
