@@ -25,7 +25,8 @@ export const OutroComponent = () => {
         [breakpoints.down('md')]: {
           width: '100%',
           py: '1rem',
-          flexDirection: 'column-reverse'
+          flexDirection: 'column-reverse',
+          border: 'none'
         }
       })}
     >

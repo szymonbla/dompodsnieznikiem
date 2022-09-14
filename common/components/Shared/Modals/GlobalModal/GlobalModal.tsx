@@ -17,10 +17,30 @@ export const GlobalModal = ({ title, isOpen, handleClose, children }: GlobalModa
       onClose={handleClose}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
-      sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}
     >
-      <Box sx={{ backgroundColor: 'grey.200', minWidth: '400px', maxWidth: '500px', p: '2rem', position: 'relative' }}>
-        <CloseIcon onClick={handleClose} sx={{ position: 'absolute', right: '2rem', top: '2rem', cursor: 'pointer' }} />
+      <Box sx={{ backgroundColor: 'grey.200', minWidth: '400px', maxWidth: '500px', p: '2rem' }}>
+        <CloseIcon
+          onClick={handleClose}
+          sx={(theme) => ({
+            position: 'absolute',
+            width: '3rem',
+            height: '3rem',
+            right: '2rem',
+            top: '2rem',
+            cursor: 'pointer',
+            [theme.breakpoints.down('md')]: {
+              right: 0,
+              top: 0,
+              color: 'text.secondary',
+              backgroundColor: 'primary.main'
+            }
+          })}
+        />
         <Typography variant="h4">{title}</Typography>
         {children}
       </Box>

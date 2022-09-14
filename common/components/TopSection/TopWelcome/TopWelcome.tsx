@@ -1,8 +1,8 @@
 import { Box } from '@mui/system';
 import { Grid, Typography } from '@mui/material';
-import { useModal } from 'state';
 
 import { CTAButton } from 'common/components/Shared';
+import { useModal } from 'state';
 
 export const TopWelcome = () => {
   const { updateModalState } = useModal();

@@ -1,6 +1,7 @@
+import { Grid } from '@mui/material';
+
 import { BaseLayout } from 'layouts';
 import { ReviewIntro, ReviewCarousel } from 'common/components';
-import { Grid } from '@mui/material';
 
 export const Reviews = () => {
   return (

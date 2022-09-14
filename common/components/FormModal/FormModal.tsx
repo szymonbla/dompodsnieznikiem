@@ -41,7 +41,7 @@ export const FormModal = () => {
   return (
     <GlobalModal title="Zapytaj o dostępność" isOpen={isOpen} handleClose={handleClose}>
       <LocalizationProvider dateAdapter={AdapterMoment}>
-        <Grid sx={{ width: '100%', mt: '2.5rem' }}>
+        <Grid sx={{ width: '100%', height: '100%', mt: '2.5rem' }}>
           <RequestDateForm handleSubmit={handleSubmit} />
         </Grid>
       </LocalizationProvider>
