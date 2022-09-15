@@ -27,7 +27,7 @@ export const RequestDateForm = ({ handleSubmit }: RequestDateFormProps) => {
       email: '',
       startDate: null,
       endDate: null,
-      guestsNumber: 6
+      guestsNumber: 1
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -101,7 +101,7 @@ export const RequestDateForm = ({ handleSubmit }: RequestDateFormProps) => {
           />
         </Grid>
         <BaseSlider name="guestsNumber" setValue={formik.setFieldValue} value={formik.values.guestsNumber} />
-        <CTAButton type="submit" label="Zapytaj o termin" />
+        <CTAButton type="submit" label="Dołącz do zadowolonych gości" />
       </Grid>
     </form>
   );

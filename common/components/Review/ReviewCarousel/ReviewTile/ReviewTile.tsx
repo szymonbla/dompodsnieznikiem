@@ -19,7 +19,12 @@ export const ReviewTile = ({ review, ratingValue, sourceIcon, reviewLink }: Revi
         }}
       >
         <Typography>{review}</Typography>
-        <Grid display="flex" justifyContent="space-between" alignItems="center">
+        <Grid
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          sx={(theme) => ({ [theme.breakpoints.down('md')]: { flexDirection: 'column', alignItems: 'flex-start' } })}
+        >
           <a href={reviewLink}>
             <SvgIcon component={sourceIcon} inheritViewBox sx={{ width: '5em', height: '3em' }} />
           </a>

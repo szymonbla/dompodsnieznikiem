@@ -37,15 +37,15 @@ export const InHouse = () => {
             <Typography
               textAlign="center"
               sx={(theme) => ({
-                width: '50%',
+                width: '70%',
                 [theme.breakpoints.down('md')]: {
                   width: '100%',
                   px: 4
                 }
               })}
             >
-              Wyposażenie domku Pod Śnieżnikiem zapewni Ci wszystkie niezbędne przedmioty do cieszenia się z wypoczynku.
-              Dzięki niemu będziesz w stanie w pełni cieszyć się z odpoczynku.
+              Wyposażenie domku Pod Śnieżnikiem zapewni Ci wszystkie niezbędne przedmioty, które pozwolą w pełni cieszyć
+              się z wypoczynku.
             </Typography>
           </Grid>
           <Grid

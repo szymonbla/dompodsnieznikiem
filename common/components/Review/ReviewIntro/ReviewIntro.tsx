@@ -28,7 +28,7 @@ export const ReviewIntro = () => {
       </Typography>
       <Typography variant="subtitle2" lineHeight={1.8}>
         Dom Pod Śnieżniem jest prowadzony od 4 lat. Został zweryfikowany przez blisko 1000 klientów. Nie zwlekaj i
-        sprawdź na własnej skórze.
+        sprawdź sam.
       </Typography>
     </Grid>
   );
