@@ -3,6 +3,7 @@ import React from 'react';
 import { SvgIconComponent } from '@mui/icons-material';
 
 import GoogleLogo from 'common/icons/googleLogo.svg';
+import NocowanieLogo from 'common/icons/nocowanieLogo.svg';
 export interface ReviewTileProps {
   review: string;
   sourceIcon: React.ElementType<SvgIconComponent> | SvgIconComponent;
@@ -28,21 +29,21 @@ export const reviewTiles: ReviewTileProps[] = [
   {
     review:
       'Rewelacja miejsce, cisza spokój, duża przestrzeń zarówno w domu jak i na zewnątrz. Dom czyściutki, mnóstwo udogodnień; ekspres do kawy, zmywarka. Baza do wypadów , zwiedzania okolicy. Super kontakt z Panem Wiesławem(właścicielem) który jest bardzo pomocny, i można na niego liczy w każdej sprawie.',
-    sourceIcon: GoogleLogo,
+    sourceIcon: NocowanieLogo,
     ratingValue: 5,
     reviewLink: 'https://www.nocowanie.pl/noclegi/miedzygorze/domki/162457/'
   },
   {
     review:
       'Obiekt odwiedziliśmy już 3ci raz i za każdym razem pelne zadowolenie :) nie brakowało niczego, domek piękny, zadbany, Gospodarczy bardzo pomocny i miły. Przepiękna okolica Serdecznie pozdrawiamy na pewno wrócimy! Kacper',
-    sourceIcon: GoogleLogo,
+    sourceIcon: NocowanieLogo,
     ratingValue: 5,
     reviewLink: 'https://www.nocowanie.pl/noclegi/miedzygorze/domki/162457/'
   },
   {
     review:
       'Byliśmy z rodziną teraz w okresie świątecznym.Jesteśmy bardzo zadowoleni.Pan Wiesław jest bardzo profesjonalny,dba o każdy drobiazg,zeby nikomu nic nie zabrakło i aby goście byli zadowoleni z pobytu.Domek przepiękny,W cichej okolicy,najlepszy do odpoczynku.Niczego nie brakuje.Napewno wrócimy jeszcze,jak tylko bedzie wolny termin.Pozdrawiam i życzę wszystkim dobrego wyboru.',
-    sourceIcon: GoogleLogo,
+    sourceIcon: NocowanieLogo,
     ratingValue: 5,
     reviewLink: 'https://www.nocowanie.pl/noclegi/miedzygorze/domki/162457/'
   }

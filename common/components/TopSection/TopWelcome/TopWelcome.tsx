@@ -21,7 +21,9 @@ export const TopWelcome = () => {
         '& > *': { mt: 4 },
         [theme.breakpoints.down('md')]: {
           width: '100%',
-          textAlign: 'center'
+          textAlign: 'center',
+          pr: 0,
+          px: 4
         }
       })}
     >
@@ -32,10 +34,10 @@ export const TopWelcome = () => {
         </Box>
       </Typography>
       <Typography fontSize="1.2rem" sx={{ mt: 4 }}>
-        Ciesz się rodzinną atmosferą, ciszą i wdziękiem Kotliny Kłodzkiej. Zapytaj o termin i wypocznij!
+        Ciesz się rodzinną atmosferą, ciszą i wdziękami Kotliny Kłodzkiej. Zapytaj o termin i wypocznij!
       </Typography>
       <Grid>
-        <CTAButton label="Chcę wypocząć" handleClick={handleOpen} />
+        <CTAButton label="Dołącz do zadowolnych gości" handleClick={handleOpen} />
       </Grid>
     </Grid>
   );

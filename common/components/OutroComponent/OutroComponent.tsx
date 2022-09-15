@@ -49,10 +49,10 @@ export const OutroComponent = () => {
           i spokoju!
         </Typography>
         <Typography>
-          Wszystko, co potrzebujesz znajdziesz w tym domu. Pozwól sobie na odpoczynek i spędź czas wśród przyrody.
+          Wszystko, co potrzebujesz znajdziesz w tym domu. Pozwól sobie na odpoczynek i spędź czas na łonie natury.
           Oszczędzaj czas podejmując świadome decyzje.
         </Typography>
-        <CTAButton label="Chcę wypocząć" handleClick={handleOpen} />
+        <CTAButton label="Dołącz do zadowolnych gości" handleClick={handleOpen} />
       </Grid>
     </Grid>
   );

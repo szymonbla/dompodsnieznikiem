@@ -22,6 +22,7 @@ export const Footer = () => {
         alignItems="center"
         sx={{
           width: '100%',
+          mb: 2,
           '& > a': {
             mr: '8rem',
             '&:last-child ': {

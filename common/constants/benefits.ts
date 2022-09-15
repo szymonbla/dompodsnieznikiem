@@ -22,11 +22,12 @@ export const benefitsList: BenefitComponentProps[] = [
     icon: ComprehensiveHouse,
     title: 'Kompleksowo wyposażeny dom',
     description:
-      'W pełni wyposażony dom w wszystkie sprzęty i naczynia, tak abyś poczuł się jak w własnym. A dla najmłodszych plac zabaw i trampolina.'
+      'W pełni wyposażony dom w wszystkie sprzęty i naczynia, tak abyś poczuł się jak w własnym. Dla najmłodszych szereg atrakcji takich jak plac zabaw lub trampolina.'
   },
   {
     icon: LocationIcon,
     title: 'Świetną lokalizację',
-    description: 'Miejsce wypadowe na każdą porę roku. Latem na piesze wędrówki po górach, zimą na zjazdy narciarskie.'
+    description:
+      'Miejsce wypadowe na każdą porę roku. Latem na piesze górskie wędrówki, a zimą na białe wojaże po stokach.'
   }
 ];
