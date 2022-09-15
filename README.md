@@ -9,7 +9,7 @@ Maybe you can mention me or this repo in the acknowledgements too
 <div align="center">
 <h1>DOM POD ŚNIEŻNIKIEM</h1>
 <h4>
-    <a href="http://dev-dps69.dompodsnieznikiem.pl/">View Demo</a>
+    <a href="https://dompodsnieznikiem.pl/">View Demo</a>
 </div>
 
 ## :star2: About the Project
@@ -19,7 +19,7 @@ Maybe you can mention me or this repo in the acknowledgements too
 ### :camera: Screenshots
 
 <div> 
-  <img src="https://user-images.githubusercontent.com/58032301/164995969-1831d9f9-0c0b-489a-8e5b-fa8546c95ceb.png" alt="screenshot" />
+  <img src="https://res.cloudinary.com/diwbhjogl/image/upload/v1663259910/Pod%C5%9Anie%C5%BCnikiem/ScreenPodSnieznikiem_wpu8xy.png" alt="screenshot" />
 </div>
 
 <!-- TechStack -->
