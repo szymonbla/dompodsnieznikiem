@@ -58,5 +58,25 @@ export const theme = createTheme({
 
     body1: customBodyFontSize(20),
     body2: customBodyFontSize(18)
+  },
+  components: {
+    MuiDialog: {
+      styleOverrides: {
+        paper: {
+          '& .MuiDialogActions-root': {
+            '& .MuiButton-root': {
+              color: '#001858'
+            }
+          }
+        }
+      }
+    }
   }
 });
+
+theme.typography.h1 = {
+  ...customHeaderFontSize(58),
+  [theme.breakpoints.down('md')]: {
+    ...customHeaderFontSize(48)
+  }
+};

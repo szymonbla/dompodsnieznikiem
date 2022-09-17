@@ -28,7 +28,7 @@ export const TopWelcome = () => {
       })}
     >
       <Typography variant="h1">
-        Wypoczynek w spokoju wokoł{' '}
+        Wypoczynek w spokoju wokół{' '}
         <Box component="span" sx={{ color: 'action.active', fontWeight: 900 }}>
           przyrody
         </Box>

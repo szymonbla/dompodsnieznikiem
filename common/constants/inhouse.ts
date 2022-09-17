@@ -21,7 +21,7 @@ export const InHouseList: InHouseItem[] = [
   {
     title: 'Sypialnie',
     description: `Dom składa się na 4 sypialnie, mogące pomieścić łącznie 12 osób. Pokoje są rozlokowane na parterze i piętrze, tak aby każdy z domowników miał szanse na odrobinę prywatności. Pragnąc uniknąć porannych kłotni, na każde 2 pokoje przypada jedna łazienka. W przypadku dodatkowych gości, zachęcamy do skorzystania z rozkładanej kanapy w salonie.`,
-    image: 'v1652877221/Gallery/kitchen.jpg',
+    image: 'v1663420954/Gallery/bedroom_j9w10p.jpg',
     altImage: 'Sypialnie Pod Śnieżnikiem'
   },
   {

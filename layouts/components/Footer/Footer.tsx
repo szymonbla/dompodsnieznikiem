@@ -12,7 +12,7 @@ export const Footer = () => {
       alignItems="center"
       flexDirection="column"
       flexWrap="nowrap"
-      sx={{ py: 2, height: '25vh' }}
+      sx={{ py: 2 }}
       component="footer"
     >
       <Grid
@@ -22,7 +22,7 @@ export const Footer = () => {
         alignItems="center"
         sx={{
           width: '100%',
-          mb: 2,
+          mb: 3,
           '& > a': {
             mr: '8rem',
             '&:last-child ': {
@@ -54,7 +54,7 @@ export const Footer = () => {
         justifyContent="center"
         alignItems="center"
         sx={(theme) => ({
-          width: '30%',
+          width: '70%',
           py: 2,
           [theme.breakpoints.down('md')]: { flexDirection: 'column', width: '100%', alignItems: 'center', gap: 2 }
         })}

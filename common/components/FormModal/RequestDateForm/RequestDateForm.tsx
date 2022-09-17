@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 
+import moment from 'moment';
 import * as Yup from 'yup';
 import { Moment } from 'moment';
 import { useFormik } from 'formik';
@@ -27,7 +28,7 @@ export const RequestDateForm = ({ handleSubmit }: RequestDateFormProps) => {
       email: '',
       startDate: null,
       endDate: null,
-      guestsNumber: 1
+      guestsNumber: 6
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -50,10 +51,6 @@ export const RequestDateForm = ({ handleSubmit }: RequestDateFormProps) => {
     onSubmit: handleSubmit
   });
 
-  useEffect(() => {
-    console.log(formik.values);
-  }, [formik.values]);
-
   return (
     <form style={{ width: '100%' }} onSubmit={formik.handleSubmit}>
       <Grid sx={{ '& > div': { mb: '1rem' } }}>
@@ -61,8 +58,8 @@ export const RequestDateForm = ({ handleSubmit }: RequestDateFormProps) => {
           id="name"
           type="text"
           name="name"
-          label="Imię i nazwisko"
-          placeholder="Jan Kowalski"
+          label="Imię"
+          placeholder="Janusz"
           value={formik.values.name}
           onChange={formik.handleChange}
           error={!!formik.errors.name}
@@ -74,7 +71,7 @@ export const RequestDateForm = ({ handleSubmit }: RequestDateFormProps) => {
           type="email"
           name="email"
           label="E-mail"
-          placeholder="jankowalski@gmail.com"
+          placeholder="januszkowalski@gmail.com"
           helperText={formik.errors.email}
           error={!!formik.errors.email}
           onChange={formik.handleChange}
@@ -86,6 +83,7 @@ export const RequestDateForm = ({ handleSubmit }: RequestDateFormProps) => {
             name="startDate"
             label="Zamedlowanie"
             value={formik.values.startDate}
+            minDate={moment()}
             setValue={formik.setFieldValue}
             error={!!formik.errors.startDate}
             helperText={formik.errors.startDate}
@@ -101,7 +99,7 @@ export const RequestDateForm = ({ handleSubmit }: RequestDateFormProps) => {
           />
         </Grid>
         <BaseSlider name="guestsNumber" setValue={formik.setFieldValue} value={formik.values.guestsNumber} />
-        <CTAButton type="submit" label="Dołącz do zadowolonych gości" />
+        <CTAButton type="submit" label="Zapytaj o termin" />
       </Grid>
     </form>
   );
