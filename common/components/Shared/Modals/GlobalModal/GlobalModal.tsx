@@ -20,10 +20,13 @@ export const GlobalModal = ({ title, isOpen, handleClose, children }: GlobalModa
       sx={{
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        '& .MuiDialog-scrollPaper': {
+          color: 'red'
+        }
       }}
     >
-      <Box sx={{ backgroundColor: 'grey.200', minWidth: '400px', maxWidth: '500px', p: '2rem' }}>
+      <Box sx={{ backgroundColor: 'grey.200', minWidth: '400px', maxWidth: '500px', p: '2rem' }} id="test">
         <CloseIcon
           onClick={handleClose}
           sx={(theme) => ({

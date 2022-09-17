@@ -26,12 +26,19 @@ export const OutroComponent = () => {
           width: '100%',
           py: '1rem',
           flexDirection: 'column-reverse',
+          alignItems: 'center',
           border: 'none'
         }
       })}
     >
-      <Grid sx={(theme) => ({ width: '40%', px: '1.5rem', [theme.breakpoints.down('md')]: { width: '100%', px: 2 } })}>
-        <Image src="v1652871547/HomePage/aboutHome_uiulv9.jpg" alt="Domek Pod Śnieżnikiem" width={500} height={350} />
+      <Grid
+        sx={(theme) => ({
+          width: '40%',
+          px: '1.5rem',
+          [theme.breakpoints.down('md')]: { width: '100%', px: 2, display: 'flex', justifyContent: 'center' }
+        })}
+      >
+        <Image src="v1663421021/Gallery/IMG_0895_gxbuwe.jpg" alt="Domek Pod Śnieżnikiem" width={500} height={350} />
       </Grid>
       <Grid
         sx={(theme) => ({
