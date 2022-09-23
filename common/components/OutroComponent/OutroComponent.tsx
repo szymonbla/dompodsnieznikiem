@@ -4,12 +4,16 @@ import { Box, Grid, Typography } from '@mui/material';
 
 import { CTAButton } from 'common/components/Shared';
 import { useModal } from 'state';
+import { Analytics, logEvent } from 'firebase/analytics';
+import { getGoogleAnalytics } from 'common/constants';
 
 export const OutroComponent = () => {
   const { updateModalState } = useModal();
 
   const handleOpen = () => {
     updateModalState({ isOpen: true });
+    const analytics = getGoogleAnalytics() as Analytics;
+    logEvent(analytics, 'outroCTA');
   };
 
   return (
