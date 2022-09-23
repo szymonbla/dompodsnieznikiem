@@ -1,14 +1,18 @@
 import { Box } from '@mui/system';
 import { Grid, Typography } from '@mui/material';
+import { Analytics, logEvent } from 'firebase/analytics';
 
 import { CTAButton } from 'common/components/Shared';
 import { useModal } from 'state';
+import { getGoogleAnalytics } from 'common/constants';
 
 export const TopWelcome = () => {
   const { updateModalState } = useModal();
 
   const handleOpen = () => {
     updateModalState({ isOpen: true });
+    const analytics = getGoogleAnalytics() as Analytics;
+    logEvent(analytics, 'coverCTA');
   };
 
   return (

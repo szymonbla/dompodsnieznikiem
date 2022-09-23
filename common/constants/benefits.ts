@@ -20,7 +20,7 @@ export const benefitsList: BenefitComponentProps[] = [
   },
   {
     icon: ComprehensiveHouse,
-    title: 'Kompleksowo wyposażeny dom',
+    title: 'Kompleksowo wyposażony dom',
     description:
       'W pełni wyposażony dom w wszystkie sprzęty i naczynia, tak abyś poczuł się jak w własnym. Dla najmłodszych szereg atrakcji takich jak plac zabaw lub trampolina.'
   },

@@ -5,10 +5,11 @@ import { Grid } from '@mui/material';
 import { send } from '@emailjs/browser';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
+import { logEvent, Analytics } from 'firebase/analytics';
 
 import { GlobalModal } from 'common/components/Shared/Modals/GlobalModal';
 import { RequestDateForm, FormValuesProps } from './RequestDateForm';
-import { dateMonthYearFormat } from 'common/constants';
+import { dateMonthYearFormat, getGoogleAnalytics } from 'common/constants';
 import { useModal } from 'state';
 
 export const FormModal = () => {
@@ -33,6 +34,8 @@ export const FormModal = () => {
         `${process.env.EMAIL_PUBLIC_KEY}`
       );
       updateModalState({ isOpen: false });
+      const analytics = getGoogleAnalytics() as Analytics;
+      logEvent(analytics, 'submitForm');
     } catch (error) {
       console.log(error);
     }
